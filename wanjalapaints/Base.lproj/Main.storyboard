@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eej-8y-bfS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6f-gq-sEP" userLabel="PhotographyView">
                                 <rect key="frame" x="20" y="107" width="374" height="305"/>
                                 <subviews>
@@ -162,20 +165,25 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YD7-v4-RGR" firstAttribute="leading" secondItem="a6f-gq-sEP" secondAttribute="leading" id="4a1-VD-F9G"/>
+                            <constraint firstAttribute="bottom" secondItem="eej-8y-bfS" secondAttribute="bottom" id="Lhk-Nm-tKG"/>
                             <constraint firstItem="a6f-gq-sEP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RBq-wq-J2w"/>
+                            <constraint firstItem="eej-8y-bfS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RL7-WO-4Nd"/>
                             <constraint firstItem="YD7-v4-RGR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="UlC-eF-bcg"/>
                             <constraint firstItem="e40-Wj-S6Y" firstAttribute="top" secondItem="a6f-gq-sEP" secondAttribute="bottom" constant="8" symbolic="YES" id="VOY-Tk-9ky"/>
                             <constraint firstItem="a6f-gq-sEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lvl-EA-2da"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YD7-v4-RGR" secondAttribute="trailing" symbolic="YES" id="oJ5-87-1GE"/>
                             <constraint firstItem="a6f-gq-sEP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="s1S-50-mrb"/>
+                            <constraint firstItem="eej-8y-bfS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sXZ-oU-Kad"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a6f-gq-sEP" secondAttribute="bottom" constant="450" id="usd-Hz-HtL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e40-Wj-S6Y" secondAttribute="trailing" symbolic="YES" id="vdz-fL-skE"/>
+                            <constraint firstItem="eej-8y-bfS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wQX-cb-GA3"/>
                             <constraint firstItem="e40-Wj-S6Y" firstAttribute="leading" secondItem="a6f-gq-sEP" secondAttribute="leading" id="z9l-qP-dTw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="paintingsCollectionView" destination="78p-ze-7IH" id="qqb-Ht-chv"/>
+                        <outlet property="scrollView" destination="eej-8y-bfS" id="iFw-o2-e0y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
