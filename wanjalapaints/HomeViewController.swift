@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var paintingsCollectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -17,11 +17,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         scrollView.delegate = self
         paintingsCollectionView.delegate = self
         paintingsCollectionView.dataSource = self
         addBlurStatusBar()
-        setStatusBarBackgroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
+        //setStatusBarBackgroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
         
     }
     
@@ -31,7 +34,16 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.5) {
             self.setNeedsStatusBarAppearanceUpdate()
         }
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isOpaque = false
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 50)
+        ]
+        
     }
+    
+    
+    
     
     
     override var prefersStatusBarHidden: Bool {
@@ -78,7 +90,7 @@ class ViewController: UIViewController {
 
 
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections.count
     }
@@ -104,9 +116,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 
 
-extension ViewController: UIScrollViewDelegate {
+extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
+        
+        let navigationIsHidden = offsetY <= 0
+        navigationController?.setNavigationBarHidden(navigationIsHidden, animated: true)
+        
         if offsetY < 0 {
            //coder here in the future
             

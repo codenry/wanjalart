@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wanjalapaints" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="wanjalapaints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MKB-gG-Vur"/>
+                    <navigationItem key="navigationItem" title="Home" id="LSd-7o-x1j">
+                        <barButtonItem key="leftBarButtonItem" title="logo" id="adM-Sx-IdR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="xYk-hx-2lK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="paintingsCollectionView" destination="78p-ze-7IH" id="qqb-Ht-chv"/>
                         <outlet property="scrollView" destination="eej-8y-bfS" id="iFw-o2-e0y"/>
@@ -474,14 +479,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vl3-dk-6LL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1210" y="123"/>
+            <point key="canvasLocation" x="-1529" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S2h-m7-Xhd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tgy-7W-jsI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vw0-2a-AwU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Vw0-2a-AwU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -492,7 +497,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ix2-S1-Lgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2029" y="-400"/>
+            <point key="canvasLocation" x="-2064" y="-400"/>
         </scene>
     </scenes>
     <resources>
