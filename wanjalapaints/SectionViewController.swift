@@ -29,10 +29,19 @@ class SectionViewController: UIViewController {
         captionLabel.text = section["caption"]
         bodyLabel.text = section["body"]
         coverImageView.image = UIImage(named: section["image"]!)
-        progressLabel.text = "\(indexPath.row+1) / \(sections.count)"    }
+        progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
+        
+     
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     
     @IBAction func closeButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)    }
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     
 }

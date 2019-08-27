@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var paintingsCollectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
+    var isStatusBarHidden = false
     
     
     override func viewDidLoad() {
@@ -19,8 +20,63 @@ class ViewController: UIViewController {
         scrollView.delegate = self
         paintingsCollectionView.delegate = self
         paintingsCollectionView.dataSource = self
+        addBlurStatusBar()
+        setStatusBarBackgroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        isStatusBarHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+    
+    func setStatusBarBackgroundColor(color: UIColor) {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+        statusBar.backgroundColor = color
+    }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToSection" {
+            let toViewController = segue.destination as! SectionViewController
+            let indexPath = sender as! IndexPath
+            let section = sections[indexPath.row]
+            toViewController.section = section
+            toViewController.sections = sections
+            toViewController.indexPath = indexPath
+            isStatusBarHidden = true
+            UIView.animate(withDuration: 0.5, animations: {
+                self.setNeedsStatusBarAppearanceUpdate()
+            })
+        }
+    }
+    
+    func addBlurStatusBar() {
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        let blur = UIBlurEffect(style: .dark)
+        let blurStatusBar = UIVisualEffectView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: statusBarHeight))
+        blurStatusBar.effect = blur
+        view.addSubview(blurStatusBar)
     }
 }
+
+
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,17 +100,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomeToSection" {
-            let toViewController = segue.destination as! SectionViewController
-            let indexPath = sender as! IndexPath
-            let section = sections[indexPath.row]
-            toViewController.section = section
-            toViewController.sections = sections
-            toViewController.indexPath = indexPath
-            
-        }
-    }
+
 }
 
 
