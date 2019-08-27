@@ -38,7 +38,23 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "HomeToSection", sender: indexPath)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToSection" {
+            let toViewController = segue.destination as! SectionViewController
+            let indexPath = sender as! IndexPath
+            let section = sections[indexPath.row]
+            toViewController.section = section
+            toViewController.sections = sections
+            toViewController.indexPath = indexPath
+            
+        }
+    }
 }
 
 

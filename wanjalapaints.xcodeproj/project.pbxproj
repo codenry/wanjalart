@@ -14,6 +14,9 @@
 		63ED9F3A230E3A0A00CB4D1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63ED9F38230E3A0A00CB4D1B /* LaunchScreen.storyboard */; };
 		63ED9F42230EBE0A00CB4D1B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F41230EBE0A00CB4D1B /* Data.swift */; };
 		63ED9F48230F75ED00CB4D1B /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F47230F75ED00CB4D1B /* SectionCollectionViewCell.swift */; };
+		63ED9F4A2312346F00CB4D1B /* TestimonialViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F492312346F00CB4D1B /* TestimonialViewCell.swift */; };
+		63ED9F4C231234FD00CB4D1B /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F4B231234FD00CB4D1B /* TestimonialViewController.swift */; };
+		63ED9F4E2314E05D00CB4D1B /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ED9F4D2314E05D00CB4D1B /* SectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		63ED9F3B230E3A0A00CB4D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63ED9F41230EBE0A00CB4D1B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		63ED9F47230F75ED00CB4D1B /* SectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		63ED9F492312346F00CB4D1B /* TestimonialViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewCell.swift; sourceTree = "<group>"; };
+		63ED9F4B231234FD00CB4D1B /* TestimonialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewController.swift; sourceTree = "<group>"; };
+		63ED9F4D2314E05D00CB4D1B /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				63ED9F38230E3A0A00CB4D1B /* LaunchScreen.storyboard */,
 				63ED9F3B230E3A0A00CB4D1B /* Info.plist */,
 				63ED9F47230F75ED00CB4D1B /* SectionCollectionViewCell.swift */,
+				63ED9F4D2314E05D00CB4D1B /* SectionViewController.swift */,
+				63ED9F492312346F00CB4D1B /* TestimonialViewCell.swift */,
+				63ED9F4B231234FD00CB4D1B /* TestimonialViewController.swift */,
 			);
 			path = wanjalapaints;
 			sourceTree = "<group>";
@@ -143,8 +152,11 @@
 			files = (
 				63ED9F32230E3A0800CB4D1B /* ViewController.swift in Sources */,
 				63ED9F42230EBE0A00CB4D1B /* Data.swift in Sources */,
+				63ED9F4E2314E05D00CB4D1B /* SectionViewController.swift in Sources */,
+				63ED9F4C231234FD00CB4D1B /* TestimonialViewController.swift in Sources */,
 				63ED9F48230F75ED00CB4D1B /* SectionCollectionViewCell.swift in Sources */,
 				63ED9F30230E3A0800CB4D1B /* AppDelegate.swift in Sources */,
+				63ED9F4A2312346F00CB4D1B /* TestimonialViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

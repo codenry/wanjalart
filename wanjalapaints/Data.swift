@@ -44,3 +44,58 @@ let sections = [
         "image": "henry"
     ]
 ]
+
+
+
+
+
+let testimonials = [
+    [
+        "text": "Design+Code is a wake-up call. Why should I learn a web based technology or a deprecated tool when ",
+        "name": "Jean-Marc Denis",
+        "job": "Product Designer at Facebook",
+        "avatar": "henry"
+    ],
+    [
+        "text": "If you're comfortable with Framer, you can easily transfer your knowledge to Swift. You can animate ",
+        "name": "Min-Sang Choi",
+        "job": "Interaction Designer at Google",
+        "avatar": "henry"
+    ],
+    [
+        "text": "First of all I am 12 years old, live in Britain and I just realised that all I want to do for the ",
+        "name": "Tom Fox",
+        "job": "Student",
+        "avatar": "henry"
+    ],
+    [
+        "text": "As a developer, I really appreciated the chapters on Color Theory and Typography. It was just the right balance of theory combined with practical examples.",
+        "name": "Chris Ching",
+        "job": "Teaches iOS Programming",
+        "avatar": "henry"
+    ],
+    [
+        "text": "I began a Swift learning plan 5 days ago, this is part of what I did in five days. I learned a lot ",
+        "name": "MartinRGB",
+        "job": "Designer and Coder",
+        "avatar": "henry"
+    ],
+    [
+        "text": "Thanks to Design + Code, I just released my first app on the store: Sky Graph. It's been a great",
+        "name": "Wayne Sang",
+        "job": "Senior Product Manager at TWG",
+        "avatar": "henry"
+    ],
+    [
+        "text": "I found and bought Design+Code by Meng To which takes you through each step of the process from ",
+        "name": "Kenny Chen",
+        "job": "User Experience Designer at Bankrate",
+        "avatar": "avatar-kenny-chen"
+    ],
+    [
+        "text": "Thanks to @MengTo, I was able to get a rough prototype of my first app working this weekend.",
+        "name": "Andrew McCarthy",
+        "job": "Product Designer",
+        "avatar": "henry"
+    ]
+]
