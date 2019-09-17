@@ -1,0 +1,16 @@
+PODS:
+  - Ambience (0.1.2)
+
+DEPENDENCIES:
+  - Ambience
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Ambience
+
+SPEC CHECKSUMS:
+  Ambience: 50ef53807961e96584a01f908283e25366f9899e
+
+PODFILE CHECKSUM: 3fd476983b2bc94576d20e4a5aa00147161cc05f
+
+COCOAPODS: 1.7.2
